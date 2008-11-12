@@ -32,6 +32,11 @@
 
 (in-package "CLIXDOC")
 
+(defvar *maybe-skip-methods-p* nil
+  "This is the default value for the :MAYBE-SKIP-METHODS-P keyword
+argument of CREATE-TEMPLATE and its initial value is NIL.  It is also
+used internally.")
+
 ;;; For the purpose of this file, an "entry" is a list of four or five
 ;;; symbols - a name, a keyword for the kind of the entry, a lambda
 ;;; list (for functions and macros), a documentation string, and
