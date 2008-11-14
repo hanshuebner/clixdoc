@@ -125,8 +125,8 @@ entry for each of its methods if NAME names a generic function."
                      (loop for method in (generic-function-methods (fdefinition name))
                            collect (list name :method lambda-list
                                          (documentation method t)
-                                         (mapcar #'simplify-specializer (method-specializers method))
-                                         (method-qualifiers method)))))))))
+                                         :specializers (mapcar #'simplify-specializer (method-specializers method))
+                                         :qualifiers (method-qualifiers method)))))))))
 
 (defun function-doc-entry (name)
   "Returns a list with one entry for a function if NAME names a

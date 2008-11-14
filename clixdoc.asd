@@ -1,6 +1,6 @@
 
 (asdf:defsystem :clixdoc
-  :depends-on (:cxml :swank :cl-ppcre)
+  :depends-on (:cxml :swank :cl-ppcre :alexandria)
   :serial t
   :components ((:file "packages")
                (:file "edi-docutil")
