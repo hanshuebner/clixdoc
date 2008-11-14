@@ -45,7 +45,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <title><xsl:value-of select="clix:title"/></title>
         <meta name="description"><xsl:attribute name="content"><xsl:value-of select="clix:short-description"/></xsl:attribute></meta>
-        <style type="text/css"> 
+        <style type="text/css">
   body { background-color: #ffffff; max-width: 50em }
   pre { padding:5px; background-color:#e0e0e0 }
   pre.none { padding:5px; background-color:#ffffff }
