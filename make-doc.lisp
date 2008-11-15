@@ -24,7 +24,10 @@
                 ((find name args :test #'string-equal)
                  (with-clix-element ("arg")
                    (text (string-downcase name))))
-                ((find name *current-doc-entries* :key #'first :test #'string-equal)
+                ((find-if (lambda (doc-entry)
+                            (when (symbolp doc-entry)
+                              (string-equal name doc-entry)))
+                          *current-doc-entries*)
                  (with-clix-element ("ref")
                    (text name)))
                 (t
